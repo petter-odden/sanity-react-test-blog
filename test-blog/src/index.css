@@ -1,4 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  min-height: 100%;
+}
+
 body {
+  height: 100vh;
   margin: 0;
   font-family: "Tajawal", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -6,7 +19,34 @@ body {
   background-color: #f1f1f1;
 }
 
+#root {
+  height: 100%;
+}
+
 img {
   max-width: 100%;
   margin: auto;
+}
+
+.block__content p {
+  line-height: 1.6;
+  margin: 1em 0 2em;
+}
+
+.block__content h2 {
+  font-weight: 700;
+  font-size: 32px;
+  margin: 20px 0 0;
+}
+
+@media (min-width: 768px) {
+  img.blog__image {
+    height: 600px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .block__content p {
+    font-size: 18px;
+  }
 }
